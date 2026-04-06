@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo - Entre Sol y Cemento</title>
+    <link rel="icon" href="../ASSETS/IMG/logo/icologocolor.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../ASSETS/CSS/styles.css">
+</head>
+<body class="bg-custom-light"> 
+    <div class="background">
+        <img src="../ASSETS/IMG/logo/logo_vectorial.svg" alt="Fondo">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Entre Sol y Cemento</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                    <a class="nav-link active" href="catalogo.html">Catálogo</a>
+                    <a class="nav-link" href="login.html">Ingresar</a>
+                    <a class="nav-link" href="register.html">Registrarse</a>
+                    <a class="nav-link" href="carrito.html">Carrito&nbsp;<span class="badge bg-danger" id="cantidad-carrito">0</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <header class="p-4 mb-4 bg-hero rounded-3 text-white d-flex align-items-center shadow">
+            <img src="../ASSETS/IMG/logo/logocolor192x192.png" alt="Logo" class="me-4 rounded-circle shadow-sm" style="width: 100px; height: 100px; object-fit: cover;">
+            <div>
+                <h1 class="h2 fw-bold text-white mb-1">Catálogo de Productos</h1>
+                <p class="mb-0 opacity-75">Explora nuestras piezas únicas en cemento.</p>
+            </div>
+        </header>
+
+        <div class="alert alert-info text-center" role="alert">
+            Haz clic en "Añadir" para sumar productos a tu carrito.
+        </div>
+
+        <main class="row g-4">
+            <div class="col-md-4">
+                <article class="p-3 shadow-sm bg-white rounded border text-center h-100">
+                    <img src="../ASSETS/IMG/productos/macetapkmn.png" alt="Maceta PKMN" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover;">
+                    <h3 class="text-danger h5">Maceta PKMN</h3>
+                    <p class="small text-muted">Ideal para suculentas pequeñas. Diseño minimalista.</p>
+                    <p class="fw-bold fs-5">$25.000</p>
+                    <button class="btn btn-warning fw-bold w-100 shadow-sm btn-añadir" data-id="1">Añadir al carrito</button>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <article class="p-3 shadow-sm bg-white rounded border text-center h-100">
+                    <img src="../ASSETS/IMG/productos/buda.png" alt="Buda Cemento" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover;">
+                    <h3 class="text-danger h5">Buda de Cemento</h3>
+                    <p class="small text-muted">Pieza rústica para armonizar ambientes exteriores.</p>
+                    <p class="fw-bold fs-5">$300.000</p>
+                    <button class="btn btn-warning fw-bold w-100 shadow-sm btn-añadir" data-id="2">Añadir al carrito</button>
+                </article>
+            </div>
+        </main>
+
+        <section class="text-center my-5 p-4 bg-white rounded shadow-sm border">
+            <h4 class="text-danger fw-bold">¿Buscas algo personalizado?</h4>
+            <p>Escríbenos para proyectos a medida y pedidos por mayor.</p>
+            <a href="mailto:EntreSolyCemento@gmail.com" class="btn btn-primary shadow-sm">Enviar Correo</a>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        © 2026 Entre Sol y Cemento - Todos los derechos reservados
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../ASSETS/JS/script.js"></script>
+</body>
+</html>

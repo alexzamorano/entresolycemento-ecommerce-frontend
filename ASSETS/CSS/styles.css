@@ -1,0 +1,363 @@
+/* ============================================================
+   ENTRE SOL Y CEMENTO — Sistema de diseño
+   Paleta extraída del logo + psicología del color para e-commerce
+   ============================================================
+
+   PSICOLOGÍA APLICADA:
+   • Verde musgo (#4E6F4E) → confianza, naturaleza, calidad artesanal
+   • Dorado ámbar (#C9973A) → CTA principal — activa urgencia y valor percibido
+   • Crema lino (#F0EDE4)  → fondo cálido, reduce ansiedad del comprador
+   • Carbón (#2A2A2A)      → texto de alto contraste, seriedad
+   • Blanco roto (#FAFAF7) → cards limpias, hace destacar el producto
+   ============================================================ */
+
+/* ── 0. VARIABLES DE MARCA ─────────────────────────────────── */
+:root {
+    --verde-musgo:     #4E6F4E;
+    --verde-claro:     #6B8F6B;
+    --verde-palido:    #A8C0A0;
+    --dorado:          #C9973A;
+    --dorado-hover:    #A87D2A;
+    --dorado-claro:    #F0D080;
+    --crema:           #F0EDE4;
+    --crema-oscuro:    #E0DAC8;
+    --blanco-roto:     #FAFAF7;
+    --carbon:          #2A2A2A;
+    --gris-medio:      #6B6B6B;
+    --gris-claro:      #D8D4CC;
+    --sombra-suave:    0 2px 12px rgba(78, 111, 78, 0.12);
+    --sombra-media:    0 4px 24px rgba(78, 111, 78, 0.18);
+    --radio:           10px;
+    --radio-grande:    16px;
+    --transicion:      all 0.25s ease;
+}
+
+/* ── 1. FUENTES ─────────────────────────────────────────────── */
+@font-face {
+    font-family: 'AliceCustom';
+    src: url(../Font/Alice-Regular.ttf) format('truetype');
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--carbon);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'AliceCustom', Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'AliceCustom', Georgia, serif;
+    color: var(--verde-musgo);
+}
+
+p, li, label, td, th, span {
+    font-family: 'AliceCustom', Georgia, serif;
+}
+
+/* ── 2. LOGO DE FONDO ───────────────────────────────────────── */
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.background img {
+    width: 55%;
+    opacity: 0.06;
+}
+
+/* ── 3. NAVBAR ──────────────────────────────────────────────── */
+.navbar {
+    background-color: var(--verde-musgo) !important;
+    border-bottom: 3px solid var(--dorado);
+    padding: 0.75rem 1.25rem;
+}
+.navbar-brand {
+    color: var(--crema) !important;
+    font-family: 'AliceCustom', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    transition: var(--transicion);
+}
+.navbar-brand:hover { color: var(--dorado-claro) !important; }
+.nav-link {
+    color: var(--crema) !important;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 6px;
+    transition: var(--transicion);
+}
+.nav-link:hover {
+    background-color: rgba(201, 151, 58, 0.2);
+    color: var(--dorado-claro) !important;
+}
+.badge.bg-danger, .badge {
+    background-color: var(--dorado) !important;
+    color: var(--carbon) !important;
+    font-weight: bold;
+}
+.navbar-toggler { border-color: var(--dorado) !important; }
+.navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(30%) saturate(400%) hue-rotate(10deg);
+}
+
+/* ── 4. HERO / HEADER ──────────────────────────────────────── */
+.bg-hero {
+    background: linear-gradient(135deg, var(--verde-musgo) 0%, #3A5C3A 100%) !important;
+    border-bottom: 4px solid var(--dorado);
+    position: relative;
+    overflow: hidden;
+}
+.bg-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,151,58,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+header img {
+    border: 3px solid rgba(201, 151, 58, 0.5);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.marca-titulo {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--crema) !important;
+    white-space: nowrap;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.marca-eslogan {
+    font-size: 1.05rem;
+    color: var(--crema-oscuro);
+    text-align: justify;
+    text-align-last: justify;
+    display: block;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* ── 5. ALERTAS ─────────────────────────────────────────────── */
+.alert-success {
+    background-color: rgba(78, 111, 78, 0.12) !important;
+    border-color: var(--verde-palido) !important;
+    color: var(--verde-musgo) !important;
+    border-radius: var(--radio);
+}
+.alert-info {
+    background-color: rgba(201, 151, 58, 0.10) !important;
+    border-color: var(--dorado-claro) !important;
+    color: #7A5C1A !important;
+    border-radius: var(--radio);
+}
+
+/* ── 6. CARDS ───────────────────────────────────────────────── */
+.card, article.card {
+    background-color: var(--blanco-roto) !important;
+    border: 1px solid var(--crema-oscuro) !important;
+    border-radius: var(--radio-grande) !important;
+    box-shadow: var(--sombra-suave) !important;
+    transition: var(--transicion) !important;
+    overflow: hidden;
+}
+.card:hover, article.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media) !important;
+    border-color: var(--verde-palido) !important;
+}
+.card-title, .card h3 { color: var(--verde-musgo) !important; }
+.card .fw-bold.fs-5 { color: var(--carbon) !important; font-size: 1.2rem !important; }
+
+/* Cards del catálogo (article sin clase .card) */
+article.p-3 {
+    background-color: var(--blanco-roto) !important;
+    border: 1px solid var(--crema-oscuro) !important;
+    border-radius: var(--radio-grande) !important;
+    transition: var(--transicion) !important;
+}
+article.p-3:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media) !important;
+}
+
+/* ── 7. BOTONES ─────────────────────────────────────────────── */
+/* Dorado = CTA principal: urgencia y valor */
+.btn-warning, .btn-warning.fw-bold {
+    background-color: var(--dorado) !important;
+    border-color: var(--dorado) !important;
+    color: var(--carbon) !important;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: var(--transicion);
+    letter-spacing: 0.02em;
+}
+.btn-warning:hover, .btn-warning.fw-bold:hover {
+    background-color: var(--dorado-hover) !important;
+    border-color: var(--dorado-hover) !important;
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 151, 58, 0.4);
+}
+.btn-outline-secondary {
+    border-color: var(--verde-claro) !important;
+    color: var(--verde-musgo) !important;
+    border-radius: 8px;
+    transition: var(--transicion);
+}
+.btn-outline-secondary:hover {
+    background-color: var(--verde-musgo) !important;
+    color: white !important;
+}
+.btn-primary {
+    background-color: var(--verde-musgo) !important;
+    border-color: var(--verde-musgo) !important;
+    color: white !important;
+    border-radius: 8px;
+    transition: var(--transicion);
+}
+.btn-primary:hover {
+    background-color: var(--verde-claro) !important;
+    border-color: var(--verde-claro) !important;
+    transform: translateY(-1px);
+}
+.btn-outline-danger {
+    border-color: var(--dorado) !important;
+    color: var(--dorado-hover) !important;
+    border-radius: 8px;
+    transition: var(--transicion);
+}
+.btn-outline-danger:hover {
+    background-color: var(--dorado) !important;
+    color: var(--carbon) !important;
+}
+#btn-subir {
+    background-color: var(--verde-musgo) !important;
+    border: 2px solid var(--dorado) !important;
+    color: white !important;
+    width: 48px;
+    height: 48px;
+    border-radius: 50% !important;
+    font-size: 1.3rem;
+    transition: var(--transicion);
+    box-shadow: var(--sombra-media);
+}
+#btn-subir:hover {
+    background-color: var(--dorado) !important;
+    color: var(--carbon) !important;
+    transform: translateY(-3px);
+}
+
+/* ── 8. FORMULARIOS ─────────────────────────────────────────── */
+.formulario {
+    background-color: rgba(250, 250, 247, 0.88) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--crema-oscuro) !important;
+    padding: 35px;
+    border-radius: var(--radio-grande);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--sombra-media);
+}
+.form-control {
+    border: 1.5px solid var(--gris-claro);
+    border-radius: 8px;
+    background-color: var(--blanco-roto);
+    color: var(--carbon);
+    transition: var(--transicion);
+    font-family: 'AliceCustom', serif;
+}
+.form-control:focus {
+    border-color: var(--verde-musgo) !important;
+    box-shadow: 0 0 0 3px rgba(78, 111, 78, 0.15) !important;
+    background-color: white;
+}
+.form-label {
+    color: var(--verde-musgo);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ── 9. TABLA CARRITO ───────────────────────────────────────── */
+.table { border-color: var(--crema-oscuro) !important; }
+.table thead {
+    background-color: var(--verde-musgo) !important;
+    color: var(--crema) !important;
+}
+.table thead th {
+    color: var(--crema) !important;
+    font-weight: 600;
+    border-color: var(--verde-claro) !important;
+}
+.table tbody tr:hover { background-color: rgba(78, 111, 78, 0.05) !important; }
+.table-secondary { background-color: var(--crema-oscuro) !important; }
+
+/* ── 10. ASIDE ──────────────────────────────────────────────── */
+aside {
+    background-color: rgba(78, 111, 78, 0.07) !important;
+    border: 1px solid var(--verde-palido) !important;
+    border-radius: var(--radio);
+}
+.aside-list { list-style: none; padding: 0; }
+.aside-list li {
+    padding: 0.4rem 0 0.4rem 1.4rem;
+    position: relative;
+    color: var(--gris-medio);
+    font-size: 0.95rem;
+}
+.aside-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--dorado);
+    font-size: 0.7rem;
+    top: 0.55rem;
+}
+
+/* ── 11. CTA SECTIONS ───────────────────────────────────────── */
+.text-danger { color: var(--verde-musgo) !important; }
+h2.text-danger, h3.text-danger, h4.text-danger { color: var(--verde-musgo) !important; }
+
+/* ── 12. FOOTER ─────────────────────────────────────────────── */
+footer {
+    background: linear-gradient(135deg, #2A3D2A 0%, var(--verde-musgo) 100%) !important;
+    border-top: 3px solid var(--dorado);
+    color: var(--crema) !important;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ── 13. IMÁGENES ───────────────────────────────────────────── */
+.product-image-table { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+.img-main-hero { width: 400px; height: 300px; object-fit: cover; border-radius: var(--radio); }
+
+/* ── 14. RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 992px) {
+    .marca-titulo { font-size: 2.4rem; }
+    .marca-eslogan { font-size: 0.85rem; }
+}
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    header img { margin-right: 0 !important; margin-bottom: 15px; width: 100px !important; height: 100px !important; }
+    .marca-titulo { white-space: normal; font-size: 1.9rem; }
+    .marca-eslogan { text-align: center; text-align-last: center; font-size: 0.95rem; }
+    .img-main-hero { width: 100%; height: auto; }
+    .formulario { padding: 20px; }
+}
+@media (max-width: 420px) {
+    .marca-titulo { font-size: 1.5rem; }
+    .navbar-brand { font-size: 1rem; }
+}
