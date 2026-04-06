@@ -11,7 +11,6 @@
 - 🚀 Funcionalidades
 - 🛠 Tecnologías Utilizadas
 - 📁 Estructura del Proyecto
-- ▶️ Instalación y Uso
 - 📸 Preview
 - 🧠 Aprendizajes Clave
 - 📌 Próximos Pasos
