@@ -38,6 +38,11 @@ Se utilizó jQuery de forma complementaria para agilizar ciertas interacciones, 
 
 ## 📸 Preview
 
+### Vista Principal (Home)
+![Vista Principal del Index](ASSETS/IMG/preview/preview-index.png)
+
+### Gestión del Carrito
+![Vista del Carrito de Compras](ASSETS/IMG/preview/preview-carrito.png)
 
 
 ## 🧠 Aprendizajes Clave
@@ -56,5 +61,5 @@ Se utilizó jQuery de forma complementaria para agilizar ciertas interacciones, 
 
 ## 👤 Autor
 **Alex Zamorano**  
-- Laboratorio clínico | Desarrollador Frontend en formación  
+- Laboratorio clínico | Desarrollador Fullstack Python en formación  
 - LinkedIn: [https://www.linkedin.com/in/alex-zamorano](https://www.linkedin.com/in/alex-zamorano)  
